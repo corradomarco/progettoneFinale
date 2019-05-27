@@ -1,7 +1,8 @@
 @import '~bootstrap/dist/css/bootstrap.css' ;
 
 .listaUt{
-    background-color : red;
+    background-color : lightcoral;
     border-style : outset;
-    border-color : orangered;
+      border-radius: 10px;
+    border-color : red;
 }

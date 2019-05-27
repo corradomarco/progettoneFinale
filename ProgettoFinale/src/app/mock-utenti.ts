@@ -1,8 +1,8 @@
-    
+
 import {Utente} from './utente';
 
 export const UTENTI: Utente[] = [
-    {nome : 'Giacomo', cognome : 'Poretti', email : 'giacomino@gmail.com', password : 'GiacominoBello'},
-    {nome : 'Giovanni', cognome : 'Storti', email : 'GiovanniStorti@gmail.com', password : 'GiovanniStorti'},
-    {nome : 'Aldo', cognome : 'Baglio', email : 'AldoBaglio@gmail.com', password : 'AldoBaglio'},
+    {nome : 'Marco', cognome : 'Corrado', email : 'corrado.marco@gmail.com', password : 'Corraaa'},
+    {nome : 'Bisceglia', cognome : 'Domenico', email : 'BiscegliaDomenico@gmail.com', password : 'bisceee'},
+    {nome : 'Gesu', cognome : 'Dio', email : 'Diogesuu@gmail.com', password : 'diecicomandamenti'},
   ];
