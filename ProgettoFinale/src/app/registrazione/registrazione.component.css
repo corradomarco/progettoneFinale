@@ -1,0 +1,15 @@
+@import '~bootstrap/dist/css/bootstrap.css' ;
+
+.ng-valid:not(form){
+    border-left : 5px solid green;
+}
+.ng-invalid:not(form){
+    border-left : 5px solid red;
+}
+
+.reg{
+    border-style: inset;
+    border-radius: 10px;
+        border-color : blue;
+    background-color :  lightblue;
+}

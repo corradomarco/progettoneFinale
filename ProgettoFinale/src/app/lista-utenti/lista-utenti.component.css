@@ -1,0 +1,7 @@
+@import '~bootstrap/dist/css/bootstrap.css' ;
+
+.listaUt{
+    background-color : red;
+    border-style : outset;
+    border-color : orangered;
+}
