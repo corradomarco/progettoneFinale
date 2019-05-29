@@ -1,26 +1,26 @@
-    
-<button (click)=onClick() class = "form-control">
+
+<button (click)=onClick() class = "btn-primary">
     LOGIN
   </button>
 
-<div *ngIf="state.showLogin">
+<div *ngIf="state.showLogin" style="background-color:lightblue">
     <form [formGroup] = 'miaForm'>
-        <h4>LOGIN</h4>
+        <h4 >LOGIN</h4>
         <div>
           nome
-          <input type = 'text' [formControl] =" miaForm.controls['nome']" name = "nome" class = "form-control">
+          <input type = 'text' [formControl] =" miaForm.controls['nome']" name = "nome" class = "form-control"style="background-color:lightblue">
         </div>
         <div>
           cognome
-          <input type = 'text' [formControl] =" miaForm.controls['cognome']" name = "cognome" class = "form-control">
+          <input type = 'text' [formControl] =" miaForm.controls['cognome']" name = "cognome" class = "form-control"style="background-color:lightblue">
         </div>
-        <div> 
-          email 
-          <input type = 'text'  [formControl] =" miaForm.controls['mail']" name = "email" class = "form-control">
+        <div>
+          email
+          <input type = 'text'  [formControl] =" miaForm.controls['mail']" name = "email" class = "form-control"style="background-color:lightblue">
         </div>
         <div>
           password
-          <input type = 'text' [formControl] =" miaForm.controls['password']" name = "password " class = "form-control">
+          <input type = 'text' [formControl] =" miaForm.controls['password']" name = "password " class = "form-control"style="background-color:lightblue">
         </div>
         <button (click)=onAccedi class = "form-control" >
             Accedi
