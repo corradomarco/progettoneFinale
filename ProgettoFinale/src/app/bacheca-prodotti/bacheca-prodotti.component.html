@@ -1,3 +1,19 @@
-<p>
-  bacheca-prodotti works!
-</p>
+<div>
+	<form>
+		<div>
+			<h2>Bacheca annunci</h2>
+			<ul class="annunci">
+				<li *ngFor="let annuncio of lista" class="list-group" class="list-group-item-info">
+					<article>
+						{{annuncio.nome}} {{annuncio.cognome}} <br> {{annuncio.prodotto}} {{annuncio.descrizione}} <br> {{annuncio.commento}}
+            <input #comment placeholder="inserisci un commento">
+          </article>
+          <div>
+              <button (click)="onAddCommento(annuncio, comment)">aggiungi</button>
+          </div>
+         </li>
+       </ul>
+  </div>
+        {{error}}
+    </form>
+</div>

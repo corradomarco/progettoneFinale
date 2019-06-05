@@ -33,7 +33,7 @@ export class RegistrazioneComponent implements OnInit {
       this.lista.push(user);
     }
     else {
-        this.error = "vffdasfdasfds";
+        this.error = "ERRORE";
     }
   }
 }

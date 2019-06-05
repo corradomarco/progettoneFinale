@@ -16,3 +16,8 @@
 .luca{
      background-color :  blue;
 }
+.reg{
+    border-style: inset;
+    border-color : orange;
+    background-color : yellow;
+}

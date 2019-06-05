@@ -12,13 +12,11 @@ import { Utente } from '../utente';
 })
 export class LoginComponent implements OnInit {
   @Input() state : Visible;
-  @Input() lista;
+  @Input() lista: Utente[];
   miaForm : FormGroup;
-  log : boolean;
+  @Input() utenteLoggato: Utente;
   constructor(fb : FormBuilder) {
-        this.miaForm = fb.group({'nome':['',Validators.required],
-                              'cognome':['', Validators.required],
-                              'mail' : ['', [Validators.required, Validators.email]],
+        this.miaForm = fb.group({ 'mail' : ['', [Validators.required, Validators.email]],
                               'password' : ['', Validators.required]
                             });
   }
@@ -27,12 +25,16 @@ export class LoginComponent implements OnInit {
   {
     this.state.showLogin = !this.state.showLogin;
   }
+   error : string;
+onAccedi(){
+   
+    if(this.miaForm.valid){    
+      for(let i = 0; i< this.lista.length; i ++){
 
-  onAccedi(){
-    if(this.miaForm.valid){
-      for(let i = 0; i<Utente.length; i ++){
-        if(Utente[i].nome == "nome" && Utente[i].cognome == "cognome" && Utente[i].mail == "mail" && Utente[i].password == "password"){
-          this.log = true;
+        if(  this.miaForm.controls['mail'].value === this.lista[i].email  && this.miaForm.controls['password'].value === this.lista[i].password  ){
+         this.utenteLoggato.email = this.lista[i].email;
+         this.utenteLoggato.password = this.lista[i].password;
+   
         }
       }
     }

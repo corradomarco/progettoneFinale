@@ -1,29 +1,24 @@
 
-<button (click)=onClick() class = "btn-primary">
-    LOGIN
-  </button>
+<div  style = "border-radius : 10px, border : solid block 2px black">
+    <button (click)=onClick() class = "btn-primary">
+      LOGIN
+    </button>
 
-<div *ngIf="state.showLogin" style="background-color:lightblue">
-    <form [formGroup] = 'miaForm'>
-        <h4 >LOGIN</h4>
-        <div>
-          nome
-          <input type = 'text' [formControl] =" miaForm.controls['nome']" name = "nome" class = "form-control"style="background-color:lightblue">
-        </div>
-        <div>
-          cognome
-          <input type = 'text' [formControl] =" miaForm.controls['cognome']" name = "cognome" class = "form-control"style="background-color:lightblue">
-        </div>
-        <div>
-          email
-          <input type = 'text'  [formControl] =" miaForm.controls['mail']" name = "email" class = "form-control"style="background-color:lightblue">
-        </div>
-        <div>
-          password
-          <input type = 'text' [formControl] =" miaForm.controls['password']" name = "password " class = "form-control"style="background-color:lightblue">
-        </div>
-        <button (click)=onAccedi class = "form-control" >
-            Accedi
-        </button>
-    </form>
+  <div *ngIf="state.showLogin">
+      <form [formGroup] = 'miaForm'>
+          <h4>LOGIN</h4>
+          
+          <div> 
+            email 
+            <input type = 'text'  [formControl] ="miaForm.controls['mail']" name = "email" class = "form-control">
+          </div>
+          <div>
+            password
+            <input type = 'text' [formControl] ="miaForm.controls['password']" name = "password " class = "form-control">
+          </div>
+          <button (click)="onAccedi()" class = "form-control" >
+              Accedi
+          </button>
+      </form>
+  </div>
 </div>
